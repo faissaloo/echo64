@@ -5,7 +5,6 @@ section .text
 
 _start:
   mov   al, `\n` ;put the newline in al
-  xor   rdx, rdx ;set rdx to 0
 
   pop   rbp ;Pops number of arguments to rbp
   pop   rsi ;pops first argument
