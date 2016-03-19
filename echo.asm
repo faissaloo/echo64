@@ -10,7 +10,7 @@ _start:
   pop   rsi ;pops first argument
 
   dec   rbp
-  jz    _echodone ;if there are no arguments jump to the end
+  jz    _done ;if there are no arguments jump to the end
 
   pop   rsi
 
@@ -59,7 +59,6 @@ _nextqword:
   shr   r8, 3
   add   rdx, r8
 
-_echodone:
   mov     byte [rsi + rdx], al
   cmp     al, 0
   je      _nonl
