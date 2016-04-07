@@ -31,7 +31,8 @@ _main:
   dec   rbp
   jz    _lastarg
   pop   rdi
-  mov   byte [rdi - 1], ' '
+  mov   byte [rdi - 1], ' ' ;Replace the null characters with spaces in the case
+                            ;of multiple arguments
   jmp   _main
 
 _lastarg:
